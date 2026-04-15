@@ -139,3 +139,20 @@ setInterval(()=>{
     document.querySelector('.item_london').textContent = `${FormatTime(0)}`;
     document.querySelector('.item_newyork').textContent = `${FormatTime(-4)}`;
 },1000)
+
+const orelIReshka = document.querySelector("rand");
+
+
+const buttom = orelIReshka.querySelector('.coin_btn');
+const coin = orelIReshka.querySelector('.coin');
+
+let i=0;
+let deg = 0;
+
+console.log(coin.children)
+
+buttom.addEventListener('click',()=>{
+    deg += 3600;
+    coin.style.transform = `rotate3d(-1,1,-1, ${deg}deg)`
+        coin.children[Math.round(Math.random())].style.zIndex = ++i;
+})
